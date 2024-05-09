@@ -1,0 +1,267 @@
+import java.util.Scanner;
+
+public class Example3 {
+
+	public static void main(String[] args) {
+		int age;
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter your age:");
+		age=sc.nextInt();
+		if(age>=18)
+		{
+			System.out.println("Eligible for vote");
+		}
+		else
+		{
+			System.out.println("Not Eligible for vote");
+		}
+	}
+
+}
+output:
+Enter your age:
+19
+Eligible for vote
+import java.util.Scanner;
+
+public class Example3 {
+
+	public static void main(String[] args) {
+		int marks;
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter your marks:");
+		marks=sc.nextInt();
+		if(marks>=90)
+		{
+			System.out.println("You obtained Grade A");
+		}
+		else if(marks>=80)
+		{
+			System.out.println("You have obtained Grade B");
+		}
+		else if(marks>=60)
+		{
+			System.out.println("You have obtained Grade C");
+		}
+		else if(marks>0)
+		{
+			System.out.println("Pass");
+		}
+		else
+		{
+			System.out.println("Absent");
+		}
+	}
+}
+output:
+Enter your marks:
+92
+You obtained Grade A
+import java.util.Scanner;
+
+public class Example3 {
+
+	public static void main(String[] args) {
+		int num=11;
+		if(num > 10)
+		{
+			if(num%2==0)
+			{
+				System.out.println("Satisfied");
+			}
+			else
+			{
+				System.out.println("2nd condition failed");
+			}
+		}
+		else
+		{
+			System.out.println("First condition failed");
+		}
+	}
+}
+output:
+2nd condition failed
+import java.util.Scanner;
+
+public class Example3 {
+
+	public static void main(String[] args) {
+		System.out.println("Enter your choice:");
+		System.out.println("1.Coffee");
+		System.out.println("2.Tea");
+		System.out.println("3.Juice");
+		int ch=new Scanner(System.in).nextInt();
+		switch(ch)
+		{
+		case 1:
+			System.out.println("Price of coffee is 20INR");
+			break;
+		case 2:
+			System.out.println("Price of Tea is 15INR");
+			break;
+		case 3:
+			System.out.println("Price of Juice is 40INR");
+			break;
+		default:
+			System.out.println("Wrong entry");
+		}
+	}
+}
+output:
+Enter your choice:
+1.Coffee
+2.Tea
+3.Juice
+2
+Price of Tea is 15INR
+public class Example3 {
+
+	public static void main(String[] args) {
+		int a=15,b=15;
+		while(a<10)
+		{
+			a++;
+			System.out.print(a+"  ");
+		}
+		System.out.println("\n---------------");
+		do 
+		{
+			b++;
+			System.out.print(b+"  ");
+		}while(b<10);
+	}
+}
+output:
+16  
+public class Example3 {
+
+	public static void main(String[] args) {
+
+      for(int i=1;i<=10;i++)
+      {
+    	  System.out.print(i+" ");
+      }
+	}
+}
+output:
+1 2 3 4 5 6 7 8 9 10
+import java.util.Scanner;
+
+public class Example3 {
+
+	public static void main(String[] args) {
+     int num,i;
+     boolean f = false;
+     System.out.println("Enter a number to check prime or not");
+     Scanner sc = new Scanner(System.in);
+     num = sc.nextInt();
+     for(i=2; i< num/2;++i)
+     {
+    	 if(num%i==0)
+    	 {
+    		 f=true;
+    		 break;
+    	 }
+     }
+     if(f)
+     {
+    	 System.out.println("Not a prime");
+     }
+     else
+     {
+    	 System.out.println("prime");
+     }
+	}
+}
+output:
+Enter a number to check prime or not
+3
+prime
+import java.util.Scanner;
+
+public class Example3 {
+
+	public static void main(String[] args) {
+	  int actualPin=1234;
+     int pin,count=0,amount;
+     do{
+        System.out.println("Enter your pin:");
+        Scanner sc =new Scanner(System.in);
+        pin=sc.nextInt();
+        if(pin==actualPin)
+            {
+        	 	System.out.println("Enter amount to withdraw:");
+        	 	amount=sc.nextInt();
+        	 	System.out.println(amount+" withdraw successfully");
+        	 	break;
+            }
+        else 
+        {
+        	count++;
+        	if(count<=3)
+        	{
+        		System.out.println(count+" wrong attempt");
+        	}
+        }
+       
+     }while(count<3);
+     if(count==3)
+     {
+    	 System.out.println("Your card blocked!");
+     }
+	}
+}
+output:
+Enter your pin:
+1234
+Enter amount to withdraw:
+2000
+2000 withdraw successfully
+import java.util.Scanner;
+
+public class Example4 {
+
+	public static void main(String[] args) {
+		char ch;
+		System.out.println("Enter a character:");
+		Scanner sc=new Scanner(System.in);
+		ch=sc.next().charAt(0);
+		int a=(int)ch;
+		System.out.println("ASCII of "+ch+" is: "+a);
+	}
+
+}
+output:
+Enter a character:
+d
+ASCII of dis:100
+import java.util.*;
+
+class OneDimArray
+{
+public static void main(String[] args)
+{
+int marks[]=new int[5];
+Scanner sc=new Scanner(System.in);
+System.out.println("Enter 5 student's marks:");
+for(int i=0;i<5;i++)
+{
+marks[i]=sc.nextInt();
+}
+System.out.println("Marks of all is:");
+for(int i=0;i<5;i++)
+{
+System.out.print(marks[i]+" ");
+}
+}
+}
+output:
+Enter 5 student's marks:
+77
+88
+98
+96
+96
+Marks of all is:
+77 88 98 96 96 
