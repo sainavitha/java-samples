@@ -1,0 +1,9 @@
+// Superclass
+class Parent {
+    int x = 10;
+}
+
+// Subclass
+class Child extends Parent {
+    int x = 20; // This shadows the 'x' field in the superclass
+}
